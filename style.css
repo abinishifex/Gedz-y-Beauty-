@@ -161,7 +161,7 @@ html,body {
 
 .slides {
   display: flex;
-  width: 100%;
+  width: 115%;
   transition: transform 0.7s ease-in-out;
 }
 
