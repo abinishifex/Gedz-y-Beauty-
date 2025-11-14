@@ -68,12 +68,7 @@
         </tr>
       </tfoot>
     </table>    
-    <iframe  
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-  width="560"  
-  height="315"  
-  allowfullscreen> 
-</iframe>   
+    
 <table border="10" cellpadding="5" cellspacing="3"> 
 <tr> 
 <th>Product</th> 
@@ -83,6 +78,27 @@ src="https://www.youtube.com/embed/dQw4w9WgXcQ"
 <td>Bread</td> 
 <td>$2</td> 
 </tr> 
+</table>
+<table border="1">
+  <thead>
+    <colgroup>
+      <col span="2" style="background-color: red;">
+      <col span="1" style="background-color: yellow;">
+    </colgroup>
+    <tr>
+        <th colspan="3">Student Information</th>
+        </tr>
+  <tr>
+    <td>Name</td>
+    <td>sex</td>
+    <td>year</td>
+  </tr>
+</thead>
+<tr>
+  <td>abenezer</td>
+  <td>male</td>
+  <td>third</td>
+</tr>
 </table>
 <form action="submit.php" method="post"> 
 Hello moto
@@ -95,20 +111,85 @@ Hello moto
 <input type="text" name="fullname"> 
 <input type="date" name="birthdate"> 
 </fieldset> 
-<Select name="Country">
+<Select name="Country" multiple size="1" >
     <optgroup label="Africa">
         <option value="Ethiopian">Ethiopian</option>
-        <option value="Kenya">Kenya</option>
+        <option value="Kenya" selected>Kenya</option>
+        <option value="Kenya" >adama</option>
     </optgroup>
     <optgroup label="Asian">
         <option value="Europe">Europe</option>
         <option value="Europe">India</option>
     </optgroup>
-    <audio controls autoplay loop> 
-<source src="sound.mp3" type="audio/mpeg"> 
-Your browser does not support the audio element. 
-</audio> 
-
 </Select>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email"><br>
+<label for="text">Student name:</label>
+<input type="text" id="username" name="username">
+<a name="section1"></a>
+<h2>Section 1</h2>
+<p>This is the first section.</p>
+
+<a href="#section1">Go to Section 1</a>
+<img src="imagej/10.jpg" usemap="#mymap" alt="world map">
+<map name="mymap">
+  <area shape="rect" coords="34,44,100,100" href="image/9.jpg" alt="Asian">
+</map>
+<video width="300px" src="image/melhik.mp4" controls>
+  <track src="image/melhik subtitle.srt" kind="subtitles" srclang="en" label="English"></track>
+</video>
+<form id="regstration" method="get" action="">
+  <label for="fname">First name</label>
+  <input type="text" name="fname" id="fname"><Br></Br>
+  <label for="lname">Lastname</label>
+  <input type="text" name="lname" id="lname"><Br></Br>
+  <label for="sex">Sex</label>
+  <label for="male">Male:</label>
+  <input type="checkbox" name="male" id="male">
+  <label for="male">Female:</label>
+  <input type="checkbox" name="female" id="female">
+  <input type="submit">
+</form>
+<input type="number" value="1" step="5"  min="0" max="20">
+<input type="range" value="5" step="5" min="0" max="10">
+<input type="button" value="click me" onclick="alert('Hello world')">
+<button type="button" onclick="alert('Hi!')">
+  <b>Click</b> Me
+</button>
+<input type="text" id="city" value="my name"><br><br><br>
+
+
+
+<fieldset style="border: 2px solid blue;">
+  <legend>Personal Information</legend>
+  <label for="fname">Full name:</label><br>
+  <input type="text" placeholder="eg. Barkot"><br>
+  <label for="email">Email:</label><br>
+  <input type="email"><br><br>
+  <label for="Adderess">Mailling Address</label><br>
+  <input id="Adderess" type="text" placeholder="street,city,zip">
+3
+<legend>Course Selection</legend>
+  <label for="course">Select a Course</label><br>
+  <select name="course" id="course" aria-placeholder="--please choose an option">
+    <optgroup label="course" >
+      <option value="dld">DLD</option>
+      <option value="dld">DSA</option>
+      <option value="dld">OOP</option>
+    </optgroup>
+  </select>
+</fieldset>
+<fieldset>
+  <legend>Preference & Status</legend>
+  <label for="level">Experince Level(0 to 10)</label><br>
+  <input type="range" value="5" step="1" min="0" max="10"><br>
+  <label for="status">Form completion Status</label><br>
+  <progress value="43" max="100">43%</progress><br>
+  <label for="load">Server Load indicator(Example)</label><br>
+  <meter value="88" min="0" max="100"></meter>
+</fieldset>
+<input type="submit" value="Enroll Now" style="background-color: rgb(0, 128, 255);">
+<input type="submit" value="Clear Form" style="background-color: rgb(97, 97, 97);">
+
   </body>
 </html>
