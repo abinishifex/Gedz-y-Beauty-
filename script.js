@@ -20,36 +20,40 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide();
   });
 });
-const searchInput = document.querySelector('.search-bar');
-const productCards = document.querySelectorAll('.product-preview');
-const heroSection = document.querySelector('.hero-section');
-const productSection = document.querySelector('.product-section');
+const searchInput = document.querySelector(".search-bar");
+const productCards = document.querySelectorAll(".product-preview");
+const heroSection = document.querySelector(".hero-section");
+const collectionSection = document.querySelector(".collection-section");
+const productSection = document.querySelector(".product-section");
 
-searchInput.addEventListener('input', function () {
+searchInput.addEventListener("input", function () {
   const searchValue = searchInput.value.toLowerCase();
   let hasResults = false;
 
-  productCards.forEach(card => {
-    const name = card.querySelector('h3').textContent.toLowerCase();
-    const desc = card.querySelector('p').textContent.toLowerCase();
+  productCards.forEach((card) => {
+    const name = card.querySelector("h3").textContent.toLowerCase();
+    const desc = card.querySelector("p").textContent.toLowerCase();
 
     if (name.includes(searchValue) || desc.includes(searchValue)) {
-      card.style.display = 'block';
+      card.style.display = "block";
       hasResults = true;
     } else {
-      card.style.display = 'none';
+      card.style.display = "none";
     }
   });
 
-  // If there’s a search term, hide hero and bring results up
-  if (searchValue.trim() !== '' && hasResults) {
-    heroSection.style.display = 'none';
-    productSection.style.marginTop = '20px';
+  // When typing (search is not empty)
+  if (searchValue.trim() !== "") {
+    heroSection.style.display = "none";
+    collectionSection.style.display = "none";
+    productSection.style.marginTop = "20px";
   } else {
-    // Show hero again if search is cleared
-    heroSection.style.display = '';
-    productSection.style.marginTop = '';
-    productCards.forEach(card => (card.style.display = 'block'));
+    // When search box is empty
+    heroSection.style.display = "";
+    collectionSection.style.display = "";
+    productSection.style.marginTop = "";
+
+    // Show all products again
+    productCards.forEach((card) => (card.style.display = "block"));
   }
 });
-
