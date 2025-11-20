@@ -138,6 +138,12 @@ html,body {
   cursor: pointer;
 }
 
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+
 .landing-section {
   margin: 0;
   padding: 0;

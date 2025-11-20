@@ -42,18 +42,16 @@ searchInput.addEventListener("input", function () {
     }
   });
 
-  // When typing (search is not empty)
   if (searchValue.trim() !== "") {
     heroSection.style.display = "none";
     collectionSection.style.display = "none";
     productSection.style.marginTop = "20px";
   } else {
-    // When search box is empty
     heroSection.style.display = "";
     collectionSection.style.display = "";
     productSection.style.marginTop = "";
 
-    // Show all products again
     productCards.forEach((card) => (card.style.display = "block"));
   }
 });
+
